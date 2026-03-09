@@ -169,4 +169,17 @@ public class PlayerController : MonoBehaviour
 
 
     }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if(hit.gameObject.CompareTag("Platform"))
+        {
+            FallingPlatform fallingPlatform = hit.gameObject.GetComponent<FallingPlatform>();
+
+            if(fallingPlatform != null)
+            {
+                fallingPlatform.TriggerFall();
+            }
+        }
+    }
 }

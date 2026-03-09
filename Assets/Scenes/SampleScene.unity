@@ -143,9 +143,49 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1015071799946639904, guid: 107819da1977e5d40a41fac99844b9b7, type: 3}
+--- !u!114 &17571005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17571003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f4fe15eb3ab0e741b4dc2d55ad98c3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FallingPlatform
+  delay: 0.5
+--- !u!54 &17571006
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17571003}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &95242137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -657,15 +697,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6039363670046157614, guid: 7550dbc7fa38c45448e9386797e4dd88, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 102.5
+      value: 102.8
       objectReference: {fileID: 0}
     - target: {fileID: 6039363670046157614, guid: 7550dbc7fa38c45448e9386797e4dd88, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 36.2
+      value: 35.4
       objectReference: {fileID: 0}
     - target: {fileID: 6039363670046157614, guid: 7550dbc7fa38c45448e9386797e4dd88, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 97.1
+      value: 97.2
       objectReference: {fileID: 0}
     - target: {fileID: 6039363670046157614, guid: 7550dbc7fa38c45448e9386797e4dd88, type: 3}
       propertyPath: m_LocalRotation.w
@@ -699,6 +739,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceCubeBlackBlueDay (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6384962901571039636, guid: 7550dbc7fa38c45448e9386797e4dd88, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6384962901571039636, guid: 7550dbc7fa38c45448e9386797e4dd88, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -706,6 +754,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6384962901571039636, guid: 7550dbc7fa38c45448e9386797e4dd88, type: 3}
       insertIndex: -1
       addedObject: {fileID: 17571004}
+    - targetCorrespondingSourceObject: {fileID: 6384962901571039636, guid: 7550dbc7fa38c45448e9386797e4dd88, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 17571006}
+    - targetCorrespondingSourceObject: {fileID: 6384962901571039636, guid: 7550dbc7fa38c45448e9386797e4dd88, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 17571005}
   m_SourcePrefab: {fileID: 100100000, guid: 7550dbc7fa38c45448e9386797e4dd88, type: 3}
 --- !u!1001 &641391375
 PrefabInstance:
@@ -1278,6 +1332,33 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!54 &1105902571
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105902564}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1315027553
 GameObject:
   m_ObjectHideFlags: 0
@@ -2037,6 +2118,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3344797552917926168, guid: da1203547328fdb41974e0b5334e799a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1105902569}
+    - targetCorrespondingSourceObject: {fileID: 3344797552917926168, guid: da1203547328fdb41974e0b5334e799a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1105902571}
   m_SourcePrefab: {fileID: 100100000, guid: da1203547328fdb41974e0b5334e799a, type: 3}
 --- !u!1001 &1681565910
 PrefabInstance:
